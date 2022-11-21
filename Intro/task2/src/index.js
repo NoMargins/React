@@ -4,10 +4,15 @@ const newElem = React.createElement(
 	{ className: 'greeting' },
 	React.createElement('h1', { className: 'greeting__title' }, 'Hello, world!'),
 	React.createElement(
-		'p',
-		{ className: 'greeting__text' },
-		"I'm learning React"
-	)
+	'h1',
+	{ className: 'greeting__title' },
+    'Hello, world!'
+    ), React.createElement(
+	'p',
+	{ className: 'greeting__text' },
+    'I\'m learning React'
+    ),
+
 );
 
 ReactDOM.render(newElem, rootElement);
