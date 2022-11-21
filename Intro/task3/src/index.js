@@ -1,8 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './styles.css';
 
+const ReactDOM = require('react-dom/client');
+
 const rootElement = document.querySelector('#root');
+const root = ReactDOM.createRoot(rootElement);
 
 const newElem = (
 	<div className='greeting'>
@@ -11,4 +13,4 @@ const newElem = (
 	</div>
 );
 
-ReactDOM.render(newElem, rootElement);
+root.render(newElem);

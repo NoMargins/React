@@ -30,6 +30,6 @@
 	},
 	"description": "",
 	"dependencies": {
-		"core-js": "^3.26.1",
+		"core-js": "^3.26.1"
 	}
 }
