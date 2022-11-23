@@ -1,0 +1,23 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.profile {
+    margin: auto;
+    width: 200px;
+    height: 80px;
+    flex-direction: row;
+    text-align: center;
+    background-color: black;
+    border: 1px solid black;
+
+    &__name {
+        font-weight: 900;
+    }
+
+    &__birth {
+        font-size: 16px;
+    }
+}
