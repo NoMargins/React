@@ -6,8 +6,9 @@ const rootElem = document.querySelector('#root');
 
 
 const user = {
-   name: "Olenka",
-   dateBirth: "8 Mar 1993",
+   firstName: "Olenka",
+   lastName: "Riabenko",
+   birthDate: "8 Mar 1993",
 }
 
 ReactDOM.render(<Greeting  user={user}/>, rootElem);
