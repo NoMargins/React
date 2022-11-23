@@ -4,8 +4,8 @@ import "./index.scss";
 
 const Greeting = (props) => {
     return (
-         <div className="greeting" name={props.user.name}>
-    My name is {props.user.firstName} {props.user.lastName}. I'm {countAge(props.user.birthDate)} years old
+         <div className="greeting">
+    My name is {props.firstName} {props.lastName}. I'm {countAge(props.birthDate)} years old
 </div> 
     )
 }
