@@ -6,7 +6,7 @@ import "./styles.scss";
 
 const rootElem = document.querySelector('#root');
 
-const userInfo= {
+const user= {
     name: "Andrew", 
     avatarUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROzP7f_N_r-tJ6zgSOsylbKlGUUIGrs8jNjQ&usqp=CAU"
 }

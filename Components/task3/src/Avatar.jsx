@@ -3,6 +3,7 @@
 const Avatar = (props) => {
 return (<img
           className="avatar"
+          name={props.user.name}
           src={props.user.avatarUrl}
           alt={props.user.name}
         />)
