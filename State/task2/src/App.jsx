@@ -5,9 +5,9 @@ import "./index.scss";
 const App = () => {
     return (
         <>
-        <Clock location="Kyiv" timeOffset={+2}/>
-        <Clock location="London" timeOffset={0}/>
-        <Clock location="New York" timeOffset={-5}/>
+        <Clock location="Kyiv" offset={2}/>
+        <Clock location="London" offset={0}/>
+        <Clock location="New York" offset={-5}/>
         </>
     )
 }
