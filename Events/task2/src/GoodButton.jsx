@@ -3,7 +3,7 @@ import "./styles.scss";
 
 class GoodButton extends React.Component { 
     showAlert(e) {
-        alert("Good job!")
+        alert(e.target.innerText)
     }
 
     render() {
