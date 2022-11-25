@@ -19,9 +19,21 @@ class ColorPicker extends React.Component {
 this.showColor = this.showColor.bind(this)
 }
 
+ toUpperCaseFunct = (string) => {
+    const firstLetter = string.slice(0, 1).toUpperCase();
+    const rest = string.slice(1, string.length);
+    return firstLetter.concat(rest);
+ }
+
    showColor(e) {
     this.setState({
-        innerText: e.target.style.backgroundColor,
+        innerText: this.toUpperCaseFunct(e.target.style.backgroundColor)
+})
+   }
+
+   clear = () => {
+    this.setState({
+        innerText: ""
     })
    }
 
@@ -30,9 +42,9 @@ this.showColor = this.showColor.bind(this)
     <>
     <div className="picker__title">{this.state.innerText}</div>
     <div>
-    <button className="picker__button picker__button_coral"  style={{backgroundColor: CORAL}} onMouseOver={this.showColor} ></button>
-    <button className="picker__button picker__button_aqua" style={{backgroundColor: AQUA}} onMouseOver={this.showColor}></button>
-    <button className="picker__button picker__button_bisque" style={{backgroundColor: BISQUE}} onMouseOver={this.showColor}></button>
+    <button className="picker__button picker__button_coral"  style={{backgroundColor: CORAL}} onMouseEnter={this.showColor} onMouseLeave={this.clear}></button>
+    <button className="picker__button picker__button_aqua" style={{backgroundColor: AQUA}} onMouseEnter={this.showColor} onMouseLeave={this.clear}></button>
+    <button className="picker__button picker__button_bisque" style={{backgroundColor: BISQUE}} onMouseEnter={this.showColor} onMouseLeave={this.clear}></button>
     </div>
     </>
         )

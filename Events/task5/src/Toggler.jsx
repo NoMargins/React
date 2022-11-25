@@ -2,7 +2,6 @@ import React from "react";
 import "./index.scss";
 
 class Toggler extends React.Component {
-    // *On/Off status here*
 constructor(props) {
     super(props);
     this.state = {
