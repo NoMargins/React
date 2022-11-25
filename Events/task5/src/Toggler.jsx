@@ -6,7 +6,7 @@ class Toggler extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
-    innerText: "On",
+    innerText: "Off",
     }
 
 this.togglerChange = this.togglerChange.bind(this)
