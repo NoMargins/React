@@ -3,12 +3,8 @@ import GuestGreeting from "./GuestGreeting.jsx";
 import UserGreeting from "./UserGreeting.jsx";
 
 const Greeting = ({isLoggedIn}) => {
-    return (       
-        <div>
-            {
+    return (        
         isLoggedIn ? <UserGreeting /> : <GuestGreeting />
-            }
-        </div>
     )
 }
 
