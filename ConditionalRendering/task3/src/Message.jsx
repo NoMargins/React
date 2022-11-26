@@ -1,16 +1,14 @@
-{/* <div className="page">
-  <div className="message">
-    Hello, world!
-  </div>
-  <div className="actions">
-    <button className="btn">
-      Text 1
-    </button>
-    <button className="btn">
-      Text 2
-    </button>
-    <button className="btn">
-      Clear
-    </button>
-  </div>
-</div> */}
+import React from "react";
+
+const Message = ({text}) => {
+  if (!text) {
+    return null;
+  }
+    return ( 
+    <div className="message">
+      {text}
+    </div> 
+  )
+  }
+
+  export default Message;
