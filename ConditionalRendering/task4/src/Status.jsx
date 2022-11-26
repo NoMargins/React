@@ -4,16 +4,13 @@ import Offline from "./Offline.jsx";
 import "./styles.scss";
 
 class Status extends React.Component {
-    constructor(props) {
-      super(props),
-      this.state = {
+      state = {
         isOnline: false
       }
-    }
-   
+    
     reconnect = () => {
       this.setState({
-        isOnline: true
+        isOnline: !this.state.isOnline
       })
     }
 
