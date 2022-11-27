@@ -17,7 +17,7 @@ class Auth extends React.Component {
             this.setState({
                 isLoggedIn: true,
         });    
-    }, 3000);
+    }, 2000);
         }
         
     handleLogout = () => {
