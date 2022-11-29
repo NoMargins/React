@@ -4,7 +4,7 @@ import "./styles.scss";
 
 class TransactionsList extends React.Component {
     render() {
-     const list = this.props.list;
+     const list = this.props.transactions;
         return (
             <ul className="transactions">
                 {list.map((el) => <Transaction key={el.id} {...el}/>)}
