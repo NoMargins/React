@@ -1,20 +1,28 @@
-<div>
-  <!-- pagination -->
-  <div class="pagination">
-    <button class="btn">←</button>
-    <span class="pagination__page">1</span>
-    <button class="btn">→</button>
-  </div>
-  
-  <ul class="users">
-    <li class="user">
-      <span class="user__name">Bob</span>
-      <span class="user__age">21</span>
-    </li>
-    ...
-    <li class="user">
-      <span class="user__name">Sam</span>
-      <span class="user__age">45</span>
-    </li>
-  </ul>
-</div>
+import React from 'react';
+import Pagination from './Pagination.jsx';
+import User from './User.jsx';
+import './styles.scss';
+
+class UsersList extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			firstPage: 1,
+			userList: [],
+		};
+	}
+	render() {
+		return (
+			<div>
+				<Pagination userList={this.props.userList} />
+				<ul className='user'>
+					{this.props.userList.map((el) => (
+						<User key={el.id} {...el} />
+					))}
+				</ul>
+			</div>
+		);
+	}
+}
+
+export default UsersList;
