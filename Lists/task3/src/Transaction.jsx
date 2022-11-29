@@ -1,17 +1,20 @@
-<ul class="transactions">
-  <li class="transaction">
-    <span class="transaction__date">10 Jan</span>
-    <span class="transaction__time">19:08</span>
-    <span class="transaction__assets">USD → EUR</span>
-    <span class="transaction__rate">0.8</span>
-    <span class="transaction__amount">1,200</span>
+import React from "react";
+import moment from "moment";
+
+const formatDate = date => moment(date).format("DD MMM");
+const formatTime = date => moment(date).format("HH:mm");
+
+
+const Transaction = (item) => {
+  return (
+    <li className="transaction">
+    <span className="transaction__date">{formatDate(item.time)}</span>
+    <span className="transaction__time">{formatTime(item.time)}</span>
+    <span className="transaction__assets">{item.from} → {item.to}</span>
+    <span className="transaction__rate">{item.rate}</span>
+    <span className="transaction__amount">{item.amount}</span>
   </li>
-  ...
-  <li class="transaction">
-    <span class="transaction__date">10 Jan</span>
-    <span class="transaction__time">19:01</span>
-    <span class="transaction__assets">EUR → USD</span>
-    <span class="transaction__rate">1.1</span>
-    <span class="transaction__amount">100</span>
-  </li>
-</ul>
+  )
+}
+
+export default Transaction;

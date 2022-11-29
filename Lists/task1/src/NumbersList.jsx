@@ -1,12 +1,12 @@
 import React from "react";
-import renderList from "./RenderList.jsx";
 import "./styles.scss";
 
-const NumbersList = ({list}) => {
+const NumbersList = (props) => {
+        const numbList = props.numbers;
         return (
         <ul>
-        { renderList(list) }
-        </ul>
+        { numbList.map((el) => <li key={el}>{el}</li>) }
+        </ul> 
         )
 }
 

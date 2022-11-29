@@ -6,4 +6,4 @@ const rootElem = document.querySelector("#root");
 
 const list = [1, 3, 5, 7, 8]
 
-ReactDOM.render(<NumbersList list={list}/>, rootElem)
+ReactDOM.render(<NumbersList numbers={list}/>, rootElem)
