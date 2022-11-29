@@ -17,11 +17,13 @@ class UsersList extends React.Component {
 	render() {
 		let usersList;
 		if (this.state.sorting) {
-			usersList = this.props.users.sort((a, b) =>
-				this.state.sorting === 'asc' ? a.age - b.age : b.age - a.age
-			);
+			usersList = this.props.users
+				.slice()
+				.sort((a, b) =>
+					this.state.sorting === 'asc' ? a.age - b.age : b.age - a.age
+				);
 		} else {
-			usersList = this.props.users;
+			usersList = this.props.users.slice();
 		}
 		return (
 			<div>
