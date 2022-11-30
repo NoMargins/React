@@ -8,11 +8,11 @@ class UsersList extends React.Component {
 		super(props);
 		this.state = {
 			currentPage: 1,
-			itemsPerPage: this.props.itemsPerPage,
+			itemsPerPage: 3,
 			totalItems: this.props.userList.length,
-			lastPage: Math.ceil(this.props.userList.length / this.props.itemsPerPage),
+			lastPage: Math.ceil(this.props.userList.length / this.itemsPerPage),
 			sliceFrom: 0,
-			sliceTo: Number(this.props.itemsPerPage),
+			sliceTo: Number(this.itemsPerPage),
 		};
 	}
 
@@ -27,7 +27,7 @@ class UsersList extends React.Component {
 			this.setState({
 				currentPage: 1,
 				sliceFrom: 0,
-				sliceTo: Number(this.props.itemsPerPage),
+				sliceTo: Number(this.state.itemsPerPage),
 			});
 		}
 	};
