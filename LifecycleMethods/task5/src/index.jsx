@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import NumbersList from "./NumbersList.jsx";
+import ConnectionStatus from "./ConnectionStatus.jsx";
 
 const rootElem = document.querySelector("#root");
 
-const list = [1, 3, 5, 7, 8]
 
-ReactDOM.render(<NumbersList numbers={list}/>, rootElem)
+ReactDOM.render(<ConnectionStatus />, rootElem)
+
