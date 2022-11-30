@@ -3,23 +3,21 @@ import './styles.scss';
 
 class ConnectionStatus extends React.Component {
 	state = {
-		status: window.ononline ? 'online' : 'offline',
+		status: 'online',
 	};
 
-	offlineFunc = (e) => {
-		if (e.target.onoffline) {
-			this.setState({
-				status: 'offline',
-			});
-		}
+	offlineFunc = () => {
+		this.setState({
+			status: 'offline',
+		});
+		document.querySelector('status').classList.add('status_offline');
 	};
 
-	onlineFunc = (e) => {
-		if (e.target.ononline) {
-			this.setState({
-				status: 'online',
-			});
-		}
+	onlineFunc = () => {
+		this.setState({
+			status: 'online',
+		});
+		document.querySelector('status').classList.remove('status_offline');
 	};
 
 	componentDidMount() {
@@ -33,15 +31,7 @@ class ConnectionStatus extends React.Component {
 	}
 
 	render() {
-		return (
-			<div
-				className={
-					this.state.status === 'offline' ? 'status status_offline' : 'status'
-				}
-			>
-				{this.state.status}
-			</div>
-		);
+		return <div className='status'>{this.state.status}</div>;
 	}
 }
 
