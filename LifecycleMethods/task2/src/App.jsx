@@ -17,9 +17,9 @@ class App extends React.Component {
 		return (
 			<>
 				<>
-					{this.state.isVisible && <Clock offset={+2} location='Kyiv' />}
-					{this.state.isVisible && <Clock offset={0} location='London' />}
-					{this.state.isVisible && <Clock offset={-5} location='New York' />}
+					{this.state.isVisible && <Clock offset={+2} location='Kyiv' /> && (
+							<Clock offset={0} location='London' />
+						) && <Clock offset={-5} location='New York' />}
 				</>
 				<button className='toggle' onClick={this.toggleFucntion}>
 					{this.state.isVisible ? 'Hide' : 'Show'}
