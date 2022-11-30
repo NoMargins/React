@@ -10,14 +10,14 @@ class ConnectionStatus extends React.Component {
 		this.setState({
 			status: 'offline',
 		});
-		document.querySelector('status').classList.add('status_offline');
+		document.querySelector('.status').classList.add('status_offline');
 	};
 
 	onlineFunc = () => {
 		this.setState({
 			status: 'online',
 		});
-		document.querySelector('status').classList.remove('status_offline');
+		document.querySelector('.status').classList.remove('status_offline');
 	};
 
 	componentDidMount() {
