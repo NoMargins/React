@@ -4,7 +4,7 @@ import './styles.scss';
 class Life extends React.Component {
 	constructor(props) {
 		super(props);
-		console.log('constructor: good plase to create state');
+		console.log('constructor: good place to create state');
 	}
 
 	componentDidMount() {
@@ -17,7 +17,7 @@ class Life extends React.Component {
 		);
 	}
 
-	componentDidUpdate(prevProps, prevState) {
+	componentDidUpdate() {
 		console.log(
 			'componentDidUpdate(prevProps, prevState): some updates based on new props'
 		);
@@ -25,7 +25,7 @@ class Life extends React.Component {
 
 	componentWillUnmount() {
 		console.log(
-			'componentWillUnmount: clean before DOM related to component will be removed'
+			'componentWillUnmount(): clean before DOM related to component will be removed'
 		);
 	}
 
