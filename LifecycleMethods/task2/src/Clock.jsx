@@ -11,6 +11,7 @@ class Clock extends React.Component {
 			localTime: new Date(
 				new Date().setHours(new Date().getUTCHours() + this.props.offset)
 			),
+			thisInterval: null,
 		};
 	}
 
@@ -25,7 +26,7 @@ class Clock extends React.Component {
 	}
 
 	componentWillUnmount() {
-		cleareInterval(this.state.localTime);
+		cleareInterval(this.interval);
 	}
 
 	render() {
