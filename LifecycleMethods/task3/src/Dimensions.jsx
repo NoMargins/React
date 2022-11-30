@@ -12,10 +12,11 @@ class Dimensions extends React.Component {
 		document.title = `${this.state.width} x ${this.state.heigth}`;
 	}
 
-	onWindowSizeChange = () => {
+	onWindowSizeChange = (e) => {
+		const { innerWidth, innerHeight } = e.target;
 		this.size = this.setState({
-			width: window.innerWidth,
-			heigth: window.innerHeight,
+			width: innerWidth,
+			heigth: innerHeight,
 		});
 
 		document.title = `${this.state.width} x ${this.state.heigth}`;
@@ -26,7 +27,7 @@ class Dimensions extends React.Component {
 	}
 
 	componentWillUnmount() {
-		window.removeEventListener();
+		window.removeEventListener('resize', this.onWindowSizeChange);
 	}
 
 	render() {
