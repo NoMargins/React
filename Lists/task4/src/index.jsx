@@ -1,9 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import UsersList from "./UsersList.jsx";
-import users from "./users.js";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App.jsx';
 
-const rootElem = document.querySelector("#root");
+const rootElem = document.querySelector('#root');
 
-
-ReactDOM.render(<UsersList userList={users}/>, rootElem)
+ReactDOM.render(<App />, rootElem);

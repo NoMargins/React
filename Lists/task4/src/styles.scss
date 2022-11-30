@@ -14,19 +14,24 @@ body {
 }
 
 .users {
+	display: flex;
+	flex-direction: column;
 	list-style-type: none;
 	padding: 0;
 }
 
 .user {
-	margin: 8px;
 	width: 150px;
-	display: flex;
+	position: relative;
+	&__name {
+		margin-right: 20px;
+	}
 
 	&__age {
+		position: absolute;
+		left: 100px;
 		font-weight: 700;
 		opacity: 0.5;
-		margin-left: auto;
 	}
 }
 
@@ -38,6 +43,7 @@ body {
 
 .btn {
 	height: 32px;
+	margin: 0px 20px;
 	color: #fff;
 	border-radius: 8px;
 	width: 64px;
