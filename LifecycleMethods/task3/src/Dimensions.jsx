@@ -14,7 +14,7 @@ class Dimensions extends React.Component {
 
 	onWindowSizeChange = (e) => {
 		const { innerWidth, innerHeight } = e.target;
-		this.size = this.setState({
+		this.setState({
 			width: innerWidth,
 			heigth: innerHeight,
 		});
