@@ -17,7 +17,7 @@ class Life extends React.Component {
 		);
 	}
 
-	componentDidUpdate() {
+	componentDidUpdate(prevProps, prevState) {
 		console.log(
 			'componentDidUpdate(prevProps, prevState): some updates based on new props'
 		);
@@ -25,7 +25,7 @@ class Life extends React.Component {
 
 	componentWillUnmount() {
 		console.log(
-			'componentWillUnmount(): clean before DOM related to component will be removed'
+			'componentWillUnmount(): cleanup before DOM related to component will be removed'
 		);
 	}
 
