@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles.scss';
 
 class Clock extends React.Component {
 	constructor(props) {
@@ -25,7 +24,7 @@ class Clock extends React.Component {
 	}
 
 	componentWillUnmount() {
-		cleareInterval(this.interval);
+		clearInterval(this.interval);
 	}
 
 	render() {
