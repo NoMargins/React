@@ -10,16 +10,18 @@ class UsersList extends React.Component {
 			name: '',
 			age: '',
 			count: '',
-			filtredArr: this.props.userList,
+			filtredArr: this.props.users.slice(),
 		};
 	}
 
 	filterUsers = (e) => {
 		let filtredArr;
 		if (e.target.value != '') {
-			filtredArr = this.props.userList.filter((el) =>
-				el.name.toLowerCase().includes(e.target.value.toLowerCase())
-			);
+			filtredArr = this.props.users
+				.slice()
+				.filter((el) =>
+					el.name.toLowerCase().includes(e.target.value.toLowerCase())
+				);
 			this.setState({
 				count: filtredArr.length,
 				filtredArr,
@@ -27,7 +29,7 @@ class UsersList extends React.Component {
 		} else {
 			this.setState({
 				count: '',
-				filtredArr: this.props.userList,
+				filtredArr: this.props.users.slice(),
 			});
 		}
 	};

@@ -4,7 +4,7 @@ import users from './users.js';
 
 class App extends React.Component {
 	render() {
-		return <UserList userList={users} />;
+		return <UsersList users={users} />;
 	}
 }
 
