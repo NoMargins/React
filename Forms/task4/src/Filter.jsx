@@ -2,7 +2,7 @@ import React from 'react';
 
 class Filter extends React.Component {
 	state = {
-		filterText: null,
+		filterText: '',
 	};
 
 	render() {
