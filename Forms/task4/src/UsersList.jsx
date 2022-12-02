@@ -3,7 +3,7 @@ import User from './User.jsx';
 import Filter from './Filter.jsx';
 import './styles.scss';
 
-class UserList extends React.Component {
+class UsersList extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -48,4 +48,4 @@ class UserList extends React.Component {
 	}
 }
 
-export default UserList;
+export default UsersList;

@@ -1,5 +1,5 @@
 import React from 'react';
-import UserList from './UserList.jsx';
+import UsersList from './UsersList.jsx';
 import users from './users.js';
 
 class App extends React.Component {
