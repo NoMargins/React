@@ -1,9 +1,11 @@
 import React from 'react';
-import UsersList from './UsersList';
+import UserList from './UserList.jsx';
 import users from './users.js';
 
-const App = () => {
-	return <UsersList userList={users} />;
-};
+class App extends React.Component {
+	render() {
+		return <UserList userList={users} />;
+	}
+}
 
 export default App;

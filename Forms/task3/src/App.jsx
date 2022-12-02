@@ -1,8 +1,15 @@
 import React from 'react';
-import User from "./User.jsx"
+import UserForm from './UserForm.jsx';
+import "./styles.scss"
 
 const App = () => {
-	return <USer />;
-};
+
+	 const createUser = (user) => {
+	console.log(user); 
+	}
+
+	return <UserForm onSubmit={createUser}/>
+	
+}
 
 export default App;
