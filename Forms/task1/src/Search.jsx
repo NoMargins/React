@@ -1,30 +1,37 @@
 import React from 'react';
-import "./styles.scss";
+import './styles.scss';
 
 class Search extends React.Component {
 	state = {
-		value: ""
-	}
+		value: '',
+	};
 
-	handleValue = event => {
+	handleValue = (event) => {
 		this.setState({
 			value: event.target.value,
-		})
-	}
+		});
+	};
 
-	handleSubmit = e => {
+	handleSubmit = (e) => {
 		e.preventDefault();
-		alert(`Search text: ${this.state.value}`)
-	}
+		alert(`Search text: ${this.state.value}`);
+	};
 
 	render() {
-	return (
-		<form class='search' onSubmit={this.handleSubmit}>
-			<input type='text' className='search__input' value={this.state.value} onChange={this.handleValue}/>
-			<button className='search__button' type="submit">Search</button>
-		</form>
-	);
+		return (
+			<form class='search'>
+				<input
+					type='text'
+					className='search__input'
+					value={this.state.value}
+					onChange={this.handleValue}
+				/>
+				<button className='search__button' onClick={this.handleSubmit}>
+					Search
+				</button>
+			</form>
+		);
 	}
-};
+}
 
 export default Search;
