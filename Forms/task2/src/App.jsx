@@ -2,34 +2,14 @@ import React from 'react';
 import UserForm from './UserForm.jsx';
 import "./styles.scss"
 
-class App extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-		name: "",
-		student: "",
-		occupation: "",
-		about: ""
-	}
+const App = () => {
+
+	 const createUser = (user) => {
+	console.log(user); 
 	}
 
-	handleInput = event => {
-		const {name, value, checked, type} = event.target;
-		const val = type === "checkbox" ? checked : value;
-		this.setState({
-			[name]: val,
-		})
-	}
-
-	 createUser = (event) => {
-		event.preventDefault();
-		console.log(this.state);
-	}
-
-	render() {
-	return <UserForm value={this.state} onChange={this.handleInput} onSubmit={this.createUser}/>
-	}
-
+	return <UserForm onSubmit={createUser}/>
+	
 }
 
 export default App;
