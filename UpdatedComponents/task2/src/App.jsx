@@ -13,7 +13,7 @@ class App extends React.Component {
 		});
 	};
 
-	closeWindow = (e) => {
+	onClose = (e) => {
 		e.preventDefault();
 		this.setState({
 			isOpen: false,
@@ -27,7 +27,7 @@ class App extends React.Component {
 					Show dialog
 				</button>
 				{this.state.isOpen && (
-					<Dialog title='Recommendation' onClick={this.closeWindow}>
+					<Dialog title='Recommendation' onClose={this.onClose}>
 						<p>
 							Use immutable array methods to work with data. It will help to
 							avoid bugs
