@@ -2,13 +2,11 @@ import React from 'react';
 import ProductCategoryRow from './ProductCategoryRow.jsx';
 import ProductRow from './ProductRow.jsx';
 
-const ProductTable = (props) => {
-	const filterText = props.filterText;
-	const inStockOnly = props.inStockOnly;
+const ProductTable = ({ filterText, products, inStockOnly }) => {
 	const rows = [];
 	let lastCategory = null;
 
-	props.products.forEach((product) => {
+	products.forEach((product) => {
 		if (product.name.indexOf(filterText) === -1) {
 			return;
 		}
