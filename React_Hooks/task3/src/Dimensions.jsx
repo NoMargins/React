@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './styles.scss';
 
-const Demensions = () => {
-	const [demensions, setDemensions] = useState({
+const Dimensions = () => {
+	const [dimensions, setDimensions] = useState({
 		width: null,
 		height: null,
 	});
 
 	useEffect(() => {
 		const { innerHeight, innerWidth } = window;
-		setDemensions({
+		setDimensions({
 			width: innerWidth,
 			heigth: innerHeight,
 		});
 
 		const onWindowSizeChange = (e) => {
 			const { innerWidth, innerHeight } = e.target;
-			setDemensions({
+			setDimensions({
 				width: innerWidth,
 				heigth: innerHeight,
 			});
@@ -29,9 +29,9 @@ const Demensions = () => {
 
 	return (
 		<div className='dimensions'>
-			{demensions.width}px - {demensions.heigth}px
+			{dimensions.width}px - {dimensions.heigth}px
 		</div>
 	);
 };
 
-export default Demensions;
+export default Dimensions;
